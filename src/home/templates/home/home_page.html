@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% comment %}
+Delete the line below if you're just getting started and want to remove the welcome screen!
+<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
+{% endcomment %}
+{% endblock extra_css %}
+
+{% block content %}
+    {% for item in page.gallery_images.all %}
+        {% if forloop.first %}
+	    {% with background_image=item.image %}
+	        <h1>{{ item.heading }}</h1>
+	        <p class="lead">{{ item.caption }}</p>
+	        <p class="lead">
+	            <a class="btn btn-lg btn-dark fw-bold bolder-black bg-black" href="{{ item.button_url }}">
+	                {{ item.button_name }}
+	            </a>
+	        </p>
+	    {% endwith %}
+	{% endif %}
+    {% endfor %}
+    {% comment %}
+    Delete the line below if you're just getting started and want to remove the welcome screen!
+    {% include 'home/welcome_page.html' %}
+    {% endcomment %}
+
+{% endblock content %}
