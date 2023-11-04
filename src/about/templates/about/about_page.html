@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}template-aboutpage{% endblock %}
+{% block main_class %}bg-white mx-auto{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+<div class="container">
+    {#<h1 class="text-center mb-6">The Program</h1>#}
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+            The program.
+            <span class="text-body-secondary">What we offer.</span>
+            </h2>
+                    <p class="lead">Students at Central Maryland Martial Arts are offered a positive and enriching program of martial study
+                    for the purpose of personal development, practical self defense and physical fitness. The program
+                    centers on the the traditional Korean Martial Art of Tang Soo Do.
+                    </p>
+        </div>
+        <div class="col-md-5">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="https://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+            <text x=50% y=50% fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
+                </svg>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">
+            Tang Soo Do.
+            <span class="text-body-secondary">What we teach.</span>
+            </h2>
+                    <p class="lead">
+                        Tang Soo Do as an organized martial art is approx.. 60 years old. It’s origins, however, go back many centuries and bear the influence of of the martial cultures of China, Okinawa and Japan. In addition to Tang Soo Do students train in the
+                        Japanese art of Jujutsu, a system of unarmed combat that stresses joint locks, throws and takedowns.
+                        Classes are conducted in the traditional manner.
+                    </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="https://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+            <text x=50% y=50% fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
+                </svg>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+            The dojang.
+            <span class="text-body-secondary">Where we learn.</span>
+            </h2>
+                    <p class="lead">
+                        A serious and disciplined environment is maintained in
+                        the studio. Emphasis is on respect, humility, and commitment. The goal is development of an
+                        Indomitable Spirit. Classes are physical and active but also mentally challenging. Through commitment,
+                        sweat, trial and triumph students expand their limits, challenge and over come their fears and develop a
+                        positive framework for their lives.
+                    </p>
+        </div>
+        <div class="col-md-5">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="https://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+            <text x=50% y=50% fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
+                </svg>
+        </div>
+    </div>
+</div>
+{% endblock content %}

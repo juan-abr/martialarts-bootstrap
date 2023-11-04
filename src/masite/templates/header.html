@@ -1,0 +1,23 @@
+{% load wagtailcore_tags %}
+<header class="{#fixed-top#} text-center mb-auto px-3 bg-white">
+    <div>
+        <a class="float-md-start mb-0" href="{% slugurl 'home' %}">
+            {% include 'logo.svg' %}
+        </a>
+        <nav class="nav nav-masthead justify-content-center float-md-end py-3">
+            <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="{% slugurl 'home' %}">Home</a>
+            <div class="dropdown">
+                <a class="nav-link fw-bold py-1 px-0 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    About Us
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{% slugurl 'about' %}">The School</a></li>
+                    <li><a class="dropdown-item" href="{% slugurl 'instructors' %}">Instructors</a></li>
+                </ul>
+            </div>
+            <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="{% slugurl 'schedule' %}">Schedule</a>
+            <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="{% slugurl 'contact' %}">Contact</a>
+    	    <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="#">Log In</a>
+        </nav>
+    </div>
+</header>

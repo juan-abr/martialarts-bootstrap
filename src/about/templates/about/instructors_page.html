@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}template-aboutpage{% endblock %}
+{% block main_class %}bg-white mx-auto{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+<div class="container">
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">
+                David P. Bucheimer
+                <span class="text-body-secondary">Kwan Jang Nim</span>
+            </h2>
+            <p class="lead">
+            Mr. Bucheimer took his first Karate class in 1967 …..long time student of Frederick area Karate pioneer
+            Master William Wickham…….Also studied under Master Dale Tompkins.……over 50 years active training
+            in Tang Soo Do, Jujutsu and Filipino Martial Arts…….promoted over 75 Black Belts in 30 years at
+            CMMA……..One of the longest tenured teachers of traditional Martial Arts in Frederick……..local building
+            contractor and life long resident of Frederick County ………..married to Lisa and resides in Braddock
+            Heights, MD.
+            </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="https://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+            <text x=50% y=50% fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
+            </svg>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">
+                Nathan Lowman
+                <span class="text-body-secondary">Sam Bo Nim</span>
+            </h2>
+            <p class="lead">
+                Mr. Lowman is proud to call CMMA his Martial arts home for almost two decades.
+                He has been an active teacher for fourteen of thoes years. 
+                He has obtained the Rank of Sam Dan in Tang Soo Do under David Bucheimer and has experience in Japanese Ju- Jutsu. Later in his Martial Arts career earning a Black Shirt (teaching rank) under Dr. David Wink in the Fillipeno Martial Arts.
+        
+                Mr.Lowman has designed and taught in a variety of programs and places including Frederick Parks and Rec Center, FCF summer camp, Women’s Self Denense Clinics, and the YMCA karate program.
+            </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="https://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+            <text x=50% y=50% fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
+            </svg>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,16 @@
+/*div.jumbotron {
+    background:url(../../../media/original_images/The_Boulder_Yard.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}*/
+
+img.card-img {
+    /*object-fit:fill;*/
+    object-fit: cover;
+    object-position:50% 50%;
+    height:500px;
+    opacity: 0.5;
+    /*width:700px;*/
+}
+
