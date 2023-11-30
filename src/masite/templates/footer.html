@@ -1,6 +1,15 @@
-<footer class="text-center mt-auto text-black-50 bg-white">
-    <p>
-        Cover template for <a class="text-black" href="#">CMMA</a>, by
-        <a class="text-black" href="#">Mr. Juan</a>.
-    </p>
+{% load wagtailcore_tags %}
+<footer class="mt-auto py-3 mt-3 bg-white">
+    {% comment %}
+    {% endcomment %}
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav item">
+            <a class="nav-link px-2 text-body-secondary" href="{% slugurl 'home' %}">Home</a>
+            <a class="nav-link px-2 text-body-secondary" href="{% slugurl 'about' %}">The School</a>
+            <a class="nav-link px-2 text-body-secondary" href="{% slugurl 'instructors' %}">The Instructors</a>
+            <a class="nav-link px-2 text-body-secondary" href="{% slugurl 'schedule' %}">Schedule</a>
+            <a class="nav-link px-2 text-body-secondary" href="{% slugurl 'contact' %}">Contact</a>
+        </li>
+    </ul>
+    <p class="text-center text-body-secondary">© 2023 Central Maryland Martial Arts</p>
 </footer>

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static wagtailcore_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 {% block main_class %}container px-3{% endblock %}
@@ -14,9 +14,9 @@ Delete the line below if you're just getting started and want to remove the welc
 
 {% block content %}
     <h1>Central Maryland Martial Arts</h1>
-    <p class="lead">Strong Mind, Focused Body, Indomitable Spirit</p>
+    <p class="lead">Focused Mind, Strong Body, Indomitable Spirit</p>
     <p class="lead">
-        <a class="btn btn-lg btn-dark fw-bold bolder-black bg-black" href="#">
+        <a class="btn btn-lg btn-dark fw-bold bolder-black bg-black" href="{% slugurl 'contact' %}">
             Get Started
         </a>
     </p>
@@ -39,3 +39,9 @@ Delete the line below if you're just getting started and want to remove the welc
     {% endcomment %}
 
 {% endblock content %}
+
+{% block footer %}
+    <footer class="mt-auto py-3 mt-3">
+    </footer>
+{% endblock footer %}
+
