@@ -1,35 +1,18 @@
 {% extends "base.html" %}
-{% load static %}
+
+{% load wagtailcore_tags %}
 
 {% block body_class %}template-schedulepage{% endblock %}
 {% block main_class %}bg-white mx-auto {#container#}{% endblock %}
 
-{% block extra_css %}
-{% endblock extra_css %}
-
 {% block content %}
-    <div class="container">
-        <h1 class="text-center">Class Schedule 2023</h1>
-         
-	<div>
-        {% include 'schedule/weekly-schedule.html' %}
-	</div>
+    <h1>Class Schedule {{ page.date|date:"Y" }}</h1>
 
-        <div>
-            <h2 class="text-center">Schedule of Events & Closures</h2>
-            <p class="lead">JUNE 24 TH . – TEST 10AM – 12 NOON ( SOME TESTS MAY RUN LONGER )</p>
-            <p class="lead">JULY 4 TH - TUESDAY - CLOSED</p>
-            <p class="lead">JULY 8 TH . SATURDAY, SUMMER PICNIC 5:00PM UNTIL 9:00PM ( MORE INFO TO FOLLOW )</p>
-            <p class="lead">JULY 28 TH . SATURDAY, LAKE TRAINING AT CUNNINGHAM FALLS LAKE ( MORE INFO TO FOLLOW )</p>
-            <p class="lead">SEPTEMBER 4 TH . LABOR DAY - OPEN FOR SATURDAY CLASSES</p>
-            <p class="lead">SEPTEMBER 16 TH . TEST 10AM – 12 NOON ( SOME TESTS MAY RUN LONGER )</p>
-            <p class="lead">OCTOBER 28 TH . SATURDAY, FALL PARTY 12 NOON - 2:00PM</p>
-            <p class="lead">OCTOBER 31 ST . , TUESDAY - TRICK OR TREAT – CLOSED</p>
-            <p class="lead">NOVEMBER 23 RD . - 25 th . THURSDAY &amp; SATURDAY - THANKSGIVING – CLOSED</p>
-            <p class="lead">DECEMBER 16 TH . – TEST 10AM – 12 NOON ( SOME TESTS MAY RUN LONGER )</p>
-            <p class="lead">HOLIDAY SOCIAL TO FOLLOW – APPROX. 1 HOUR.</p>
-            <p class="lead">DECEMBER 25 TH . – JANUARY 1 ST . – CLOSED</p>
-            <p class="lead">REOPEN – JANUARY 2 ND . - TUESDAY</p>
-        </div>
-    </div>
-{% endblock content %}
+    <div>{% include 'schedule/weekly-schedule.html' %}</div>
+
+    {{ page.body|richtext }}
+
+    <p><a href="{{ page.get_parent.url }}">Return to index</a></p>
+
+{% endblock %}
+

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags %}
+
+{% block body_class %}template-scheduleindexpage{% endblock %}
+{% block main_class %}bg-white mx-auto {#container#}{% endblock %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+    {% now "Y" as current_year %}
+
+    {% comment %}
+    <div class="container">
+        {% for schedule in page.get_children %}
+            {% if schedule.specific.date|date:"Y" == current_year %}
+                {#<h1 class="text-center">{{ schedule.title }}</h1>#}
+                <h1 class="text-center">Class Schedule {{ schedule.specific.date|date:"Y" }}</h1>
+
+                <div>{% include 'schedule/weekly-schedule.html' %}</div>
+
+                <h2 class="text-center">Schedule of Events & Closures</h2>
+                {{ schedule.specific.body|richtext }}
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endcomment %}
+
+    {# Uncomment this to add an archive to the page #}
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-md-8">
+                {% for schedule in schedulepages %}
+                    {% if schedule.specific.date|date:"Y" == current_year %}
+                        {#<h1 class="text-center">{{ schedule.title }}</h1>#}
+                        <h1 class="text-center">Class Schedule {{ schedule.specific.date|date:"Y" }}</h1>
+
+                        <div>{% include 'schedule/weekly-schedule.html' %}</div>
+
+                        <h2 class="text-center">Schedule of Events & Closures</h2>
+                        {{ schedule.specific.body|richtext }}
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-sticky" style="top: 2rem;">
+                    <h2>Archive</h2>
+                    {% for schedule in schedulepages %}
+                        {% if schedule.specific.date|date:"Y" != current_year %}
+                            <a href="{% pageurl schedule %}">{{ schedule.specific.date|date:"Y" }}</a></br>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
