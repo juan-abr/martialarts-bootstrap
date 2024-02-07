@@ -14,7 +14,7 @@ class AboutPageGalleryImage(Orderable):
     image = models.ForeignKey(
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
     )
-    heading = models.CharField(max_length=20)  #To be renamed prefix for clarity
+    heading = models.CharField(max_length=20)
     secondary_heading = models.CharField(max_length=20)
     description = models.TextField()
     

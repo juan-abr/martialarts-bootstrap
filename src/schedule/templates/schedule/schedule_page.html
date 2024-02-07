@@ -8,11 +8,12 @@
 {% block content %}
     <hr class="featurette-divider">
     <div class="container">
-        <h1>Class Schedule {{ page.date|date:"Y" }}</h1>
+        <h1 class="text-center">Class Schedule {{ page.date|date:"Y" }}</h1>
 
         <div>{% include 'schedule/weekly-schedule.html' %}</div>
 
-        {{ page.body|richtext }}
+        <h2 class="text-center">Schedule of Events & Closures</h2>
+        <a>{{ page.body|richtext }}</a>
     </div>
 {% endblock %}
 

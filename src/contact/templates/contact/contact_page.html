@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static wagtailcore_tags wagtailimages_tags %}
 
 {% block body_class %}template-contactpage{% endblock %}
 {% block main_class %}bg-white container pb-4{% endblock %}
@@ -13,17 +13,17 @@
         <div class="row">
             <div class="text-bg-light col-md-6">
                 <div class="card">
-                    <img src="../../../media/original_images/The_Boulder_Yard.jpg" class="card-img" />
+                    {% image page.image original class="card-img" %}
                     <div class="p-5 card-img-overlay">
-                        <h1 class="card-title display-5 fw-bold">We're local!</h1>
-                        <p class="card-text col-md-8 fs-4">Find us at The Boulder Yard on the second floor at 5714 Industry Ln F, Frederick, MD 21704.</p>
-                        <button class="btn btn-primary btn-lg" type="button">Example button</button>
+                        <h1 class="card-title display-5 fw-bold">{{ page.title }}</h1>
+                        <p class="card-text col-md-8 fs-4">{{ page.description }}</p>
+                        {#<button class="btn btn-primary btn-lg" type="button">Example button</button>#}
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.475606887335!2d-77.41873382336236!3d39.39074477162288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c9dc7fd6fdde11%3A0x23ef672a48d27e58!2sCentral%20Maryland%20Martial%20Arts!5e0!3m2!1sen!2sus!4v1698724517462!5m2!1sen!2sus"
+                <iframe title="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.475606887335!2d-77.41873382336236!3d39.39074477162288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c9dc7fd6fdde11%3A0x23ef672a48d27e58!2sCentral%20Maryland%20Martial%20Arts!5e0!3m2!1sen!2sus!4v1698724517462!5m2!1sen!2sus"
                     class="w-100 h-100 rounded-3" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
@@ -35,9 +35,9 @@
             <div class="h-100 p-5 rounded-3">
                 <h2>Reach out to us</h2>
                 <p>
-                    Email us at cmmatsd@gmail.com
+                    Email us at {{ page.email }}
                 </p>
-                <a href="mailto:cmmatsd@gmail.com">
+                <a href="mailto:{{ page.email }}">
                     <button class="btn btn-outline-secondary">Email</button>
                 </a>
             </div>
@@ -48,7 +48,7 @@
                 <p>
                     Our phone number is (301) 639-9910
                 </p>
-                <a href="tel:3016399910">
+                <a href="tel:{{ page.phone }}">
                     <button class="btn btn-outline-secondary">Call</button>
                 </a>
             </div>
